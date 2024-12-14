@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 20px 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 10px;
+}
+
+nav ul li a.active, nav ul li a:hover {
+    color: #00ff88;
+}
+
+
+
+.hire-me {
+    background-color: #00ff88;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: #121212;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0;
+    flex-wrap: wrap;
+}
+
+.intro {
+    max-width: 600px;
+    text-align: left;
+}
+
+.intro h2 {
+    color: #00ff88;
+    font-weight: 400;
+}
+
+.intro h1 {
+    font-size: 3em;
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+.intro h1 span {
+    color: #00ff88;
+}
+
+.intro p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.download-cv {
+    background-color: #00ff88;
+    color: #121212;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 700;
+    margin-inline-end: 20px;
+}
+
+.social-links a {
+    color: #ffffff;
+    margin: 0 10px;
+    font-size: 1.5em;
+}
+
+
+.profile-pic-container {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin-right: 100px;
+}
+
+.profile-pic {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.profile-pic-container svg {
+    position: absolute;
+    top: -6px;
+    left: -9px;
+    width: 127%;
+    height: 127%;
+    transform-origin: center;
+}
+
+.profile-pic-container img{
+    mix-blend-mode: lighten;
+}
+
+.motion-circle {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .animated-circle {
+    fill: transparent;
+    /* animation: dash 5s infinite reverse; */
+    animation: 
+    dash 20s infinite reverse,
+    rotate 20s linear infinite;
+    transform-origin: center;
+  }
+  
+  @keyframes dash {
+    0% {
+      stroke-dasharray: 15 120 25 25;
+    }
+    50% {
+      stroke-dasharray: 16 25 92 72;
+    }
+    100% {
+      stroke-dasharray: 4 250 22 22;
+    }
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(360deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+
+footer {
+    margin-top: 120px;
+}
+
+footer .stats {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+footer .stats .stat {
+    text-align: center;
+    flex: 1;
+    min-width: 150px;
+    margin: 10px 0;
+}
+
+footer .stats .stat h3 {
+    font-size: 2em;
+    color: #00ff88;
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        text-align: center;
+    }
+    
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    header {
+        flex-direction: column;
+    }
+
+    .intro {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .profile-pic img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .motion-circle {
+      width: 506px;
+      height: 506px;
+    }
+  }
+
+@media (max-width: 480px) {
+    .intro h1 {
+        font-size: 2.5em;
+    }
+
+    .intro p {
+        font-size: 1em;
+    }
+
+    .download-cv {
+        padding: 8px 16px;
+    }
+
+    .social-links a {
+        font-size: 1.2em;
+    }
+}
